@@ -36,8 +36,8 @@
       </v-img>
     </v-row>
     <v-row>
-      <v-col cols="12" style="background-color: #ccc5be; color: #3e3a35">
-        <div style="line-height:1.7em" class="ma-5 ma-md-15 text-center text-subtitle-1 text-md-h6">
+      <v-col class="py-0 px-0" cols="12" >
+        <div style="line-height:1.7em;font-weight: 400;font-size:19px;" class="ma-5 ma-md-14 text-center text-xs-subtitle-1 ">
           《世界幸福報告》（World Happiness Report）為聯合國為衡量可持續的幸福發展方案，所出版的國際調查報告。<br>今年是《世界幸福報告》發布的第<strong> 10 </strong>週年，使用來自<strong>蓋洛普世界民意調查</strong>的數據，可在《世界幸福報告》官網上下載查看。<br>每年由永續發展解法組織（Sustainable Development Solutions Network, SDSN）<sup>[1]</sup> 出版，並利用<strong> Cantril 階梯 </strong><sup>[2]</sup> 方法來進行調查。
           <v-alert
             outlined
@@ -53,16 +53,16 @@
 <!--  -->
     <v-row>
       <v-col
-        cols="12"
+        class="py-0 px-0"
       >
-<!-- <Map/> -->
+<Map/>
       </v-col>
     </v-row>
 
 <!--  -->
 
     <v-row>
-      <v-col cols="12" style="background-color: #ccc5be">
+      <v-col cols="12" style="">
         <div class="ma-5 ma-md-16 text-center">
           <v-alert
             outlined
@@ -126,7 +126,7 @@
       </v-col>
     </v-row>
     <!-- <v-row>
-      <v-col cols="12" style="background-color: #ccc5be">
+      <v-col cols="12" style="">
         <div id="disqus_thread"></div>
       </v-col>
     </v-row> -->
