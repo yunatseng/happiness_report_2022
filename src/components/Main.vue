@@ -134,7 +134,6 @@
 </template>
 
 <script>
-import PTT_DATA from "../data/data";
 import Map from "../components/highChart/map.vue"
 /**
  *  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
@@ -145,14 +144,14 @@ import Map from "../components/highChart/map.vue"
     this.page.identifier = PAGE_IDENTIFIER; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
     };
     */
-(function () {
-  // DON'T EDIT BELOW THIS LINE
-  var d = document,
-    s = d.createElement("script");
-  s.src = "https://ptt-1.disqus.com/embed.js";
-  s.setAttribute("data-timestamp", +new Date());
-  (d.head || d.body).appendChild(s);
-})();
+// (function () {
+//   // DON'T EDIT BELOW THIS LINE
+//   var d = document,
+//     s = d.createElement("script");
+//   s.src = "https://ptt-1.disqus.com/embed.js";
+//   s.setAttribute("data-timestamp", +new Date());
+//   (d.head || d.body).appendChild(s);
+// })();
 
 export default {
   name: "Main",
@@ -161,26 +160,10 @@ export default {
   },
   data: () => ({}),
   computed: {
-    slides() {
-      return this.shuffleArray(PTT_DATA).slice(0, 14);
-    },
+  
   },
   methods: {
-    shuffleArray(inputArray) {
-      return inputArray.sort(() => Math.random() - 0.5);
-    },
-    textWithoutUrl(text) {
-      const textArr = text.split(" ");
-      const plainText = textArr.filter(
-        (i) => !(i.includes("http") || i.length === 0)
-      );
-      return plainText.join(" ");
-    },
-    textImgUrl(text) {
-      const textArr = text.split(" ");
-      const imgUrl = textArr.filter((i) => i.includes("http"));
-      return imgUrl;
-    },
+    
   },
 };
 </script>

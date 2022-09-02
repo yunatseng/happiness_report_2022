@@ -4,12 +4,13 @@ module.exports = {
     'vuetify'
   ],
   publicPath: process.env.NODE_ENV === 'production'
-    ? '/ptt_donation/'
+    ? '/happiness_report_2022/'
     : '/',
   configureWebpack: {
     resolve: {
       alias: {
-        "@": path.resolve(__dirname, 'src/')
+        "@": path.resolve(__dirname, 'src/'),
+        '@assets': path.resolve(__dirname,'src/assets')
       }
     }
   }
