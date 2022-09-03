@@ -52,15 +52,21 @@
 
 <!--  -->
     <v-row>
-      <v-col
-        class="py-0 px-0"
-      >
+      <v-col>
 <Map/>
       </v-col>
     </v-row>
 
 <!--  -->
+    <v-row>
+      <v-col
+        class="py-0 px-0"
+      >
+<Scatter/>
+      </v-col>
+    </v-row>
 
+<!--  -->
     <v-row>
       <v-col cols="12" style="">
         <div class="ma-5 ma-md-16 text-center">
@@ -135,6 +141,7 @@
 
 <script>
 import Map from "../components/highChart/map.vue"
+import Scatter from './plotlyChart/scatter.vue';
 /**
  *  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
  *  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables    */
@@ -156,7 +163,8 @@ import Map from "../components/highChart/map.vue"
 export default {
   name: "Main",
   components: {
-    Map
+    Map,
+    Scatter
   },
   data: () => ({}),
   computed: {
