@@ -1,6 +1,6 @@
 <template>
   <v-app>
-    <v-app-bar app color="cyan darken-1" dark>
+    <v-app-bar app color="cyan " dark>
       <h3 class="ml-2 title font-weight-light">
         World Happiness Report 2022
       </h3>
@@ -27,7 +27,7 @@
       <v-card
         flat
         tile
-        color="cyan darken-1"
+        color="cyan "
         class="white--text text-left"
         width="100%"
       >

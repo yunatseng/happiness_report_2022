@@ -94,4 +94,7 @@ export default {
 </script>
 
 <style>
+.svg-container {
+  margin: 0 auto !important;
+}
 </style>
