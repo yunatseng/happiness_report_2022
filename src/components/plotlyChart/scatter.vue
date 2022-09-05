@@ -1,25 +1,15 @@
 <template>
   <div>
     <div id="myDiv"></div>
-    <div class="ma-5 ma-md-14 text-center text-xs-subtitle-1">
-      <div class="text-center">
-        <v-btn color="cyan" @click="alert = !alert"> Toggle </v-btn>
-      </div>
-
-      <v-alert
-        :value="alert"
-        outlined
-        color="cyan"
-        class="mt-5 text-subtitle-1 text-md-h6"
-        transition="scale-transition"
-      >
-        Phasellus tempus. Fusce ac felis sit amet ligula pharetra condimentum.
-        In dui magna, posuere eget, vestibulum et, tempor auctor, justo.
-        Pellentesque posuere. Curabitur ligula sapien, tincidunt non, euismod
-        vitae, posuere imperdiet, leo. Phasellus nec sem in justo pellentesque
-        facilisis. Phasellus magna. Cras risus ipsum, faucibus ut, ullamcorper
-        id, varius ac, leo. In hac habitasse platea dictumst. Praesent turpis.
-      </v-alert>
+    <div class="mx-5 mx-md-14 text-center">
+      <v-expansion-panels >
+        <v-expansion-panel>
+          <v-expansion-panel-header style="font-size:19px;">Correlation Heatmap<span class="cyan--text" style="font-size:16px;">（可點我對照上圖）</span></v-expansion-panel-header>
+          <v-expansion-panel-content>
+            <img style="width:850px;margin-left:-100px;" src="../../assets/heatmap_all.png" alt="Correlation Heatmap for World Happiness Report 2022">
+          </v-expansion-panel-content>
+        </v-expansion-panel>
+      </v-expansion-panels>
     </div>
   </div>
 </template>
@@ -31,7 +21,7 @@ import happy_df_without_rank from "../../assets/data/happy_df_without_rank.csv";
 export default {
   data() {
     return {
-      alert: true,
+      
     };
   },
   async mounted() {
