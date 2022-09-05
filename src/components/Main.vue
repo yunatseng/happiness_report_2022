@@ -60,7 +60,7 @@
 <!--  -->
     <v-row>
       <v-col
-        
+        class="py-0 px-0" cols="12"
       >
 <Scatter/>
       </v-col>

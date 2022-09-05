@@ -1,5 +1,27 @@
 <template>
-  <div id="myDiv"></div>
+  <div>
+    <div id="myDiv"></div>
+    <div class="ma-5 ma-md-14 text-center text-xs-subtitle-1">
+      <div class="text-center">
+        <v-btn color="cyan" @click="alert = !alert"> Toggle </v-btn>
+      </div>
+
+      <v-alert
+        :value="alert"
+        outlined
+        color="cyan"
+        class="mt-5 text-subtitle-1 text-md-h6"
+        transition="scale-transition"
+      >
+        Phasellus tempus. Fusce ac felis sit amet ligula pharetra condimentum.
+        In dui magna, posuere eget, vestibulum et, tempor auctor, justo.
+        Pellentesque posuere. Curabitur ligula sapien, tincidunt non, euismod
+        vitae, posuere imperdiet, leo. Phasellus nec sem in justo pellentesque
+        facilisis. Phasellus magna. Cras risus ipsum, faucibus ut, ullamcorper
+        id, varius ac, leo. In hac habitasse platea dictumst. Praesent turpis.
+      </v-alert>
+    </div>
+  </div>
 </template>
 
 <script>
@@ -7,11 +29,18 @@ import Plotly from "plotly.js-dist-min";
 import happy_df_without_rank from "../../assets/data/happy_df_without_rank.csv";
 
 export default {
+  data() {
+    return {
+      alert: true,
+    };
+  },
   async mounted() {
-    const rows = happy_df_without_rank
+    const rows = happy_df_without_rank;
 
     function unpack(rows, key) {
-        return rows.map(function(row) { return row[key]; });
+      return rows.map(function (row) {
+        return row[key];
+      });
     }
 
     const pl_colorscale = [
@@ -19,34 +48,43 @@ export default {
       [0.2, "#263238"],
       [0.3, "#455A64"],
       [0.4, "#78909C"],
-       [0.5, "#80DEEA"],
+      [0.5, "#80DEEA"],
       [0.6, "#4DD0E1"],
       [0.666, "#00BCD4"],
       [0.8, "#0052d4"],
-       [1, "#0052d4"],
+      [1, "#0052d4"],
     ];
 
     const axis = () => ({
       showline: false,
       zeroline: false,
       gridcolor: "#ffff",
-      ticklen:2,
-      tickfont:{size:10},
-      titlefont:{size:12}
+      ticklen: 2,
+      tickfont: { size: 10 },
+      titlefont: { size: 12 },
     });
 
     const data = [
       {
         type: "splom",
         dimensions: [
-        {label:'Happiness', values:unpack(rows, 'Happiness score')},
-        {label:'GDP / Capita', values:unpack(rows, 'GDP per capita')},
-        {label:'Social support', values:unpack(rows, 'Social support')},
-        {label:'Healthy life', values:unpack(rows, 'Healthy life expectancy')},
-        {label:'Freedom life', values:unpack(rows, 'Freedom to make life choices')},
-        {label:'Generosity', values:unpack(rows, 'Generosity')},
-        {label:'Corruption', values:unpack(rows, 'Perceptions of corruption')},
-      ],
+          { label: "Happiness", values: unpack(rows, "Happiness score") },
+          { label: "GDP / Capita", values: unpack(rows, "GDP per capita") },
+          { label: "Social support", values: unpack(rows, "Social support") },
+          {
+            label: "Healthy life",
+            values: unpack(rows, "Healthy life expectancy"),
+          },
+          {
+            label: "Freedom life",
+            values: unpack(rows, "Freedom to make life choices"),
+          },
+          { label: "Generosity", values: unpack(rows, "Generosity") },
+          {
+            label: "Corruption",
+            values: unpack(rows, "Perceptions of corruption"),
+          },
+        ],
         text: unpack(rows, "Country"),
         marker: {
           color: unpack(rows, "Happiness score"),
@@ -61,27 +99,28 @@ export default {
     ];
 
     const layout = {
-      title:"Scatterplot Matrix (SPLOM) for World Happiness Report 2022<br><span style='font-size:12px;color:grey;'>Data source: <a href='https://www.kaggle.com/datasets/ajaypalsinghlo/world-happiness-report-2022'>https://www.kaggle.com/datasets/ajaypalsinghlo/world-happiness-report-2022</a></span>",
+      title:
+        "Scatterplot Matrix (SPLOM) for World Happiness Report 2022<br><span style='font-size:12px;color:grey;'>Data source: <a href='https://www.kaggle.com/datasets/ajaypalsinghlo/world-happiness-report-2022'>https://www.kaggle.com/datasets/ajaypalsinghlo/world-happiness-report-2022</a></span>",
       height: 1100,
       width: 1100,
       autosize: false,
       hovermode: "closest",
       dragmode: "select",
       plot_bgcolor: "rgba(240,240,240, 0.95)",
-      xaxis:axis(),
-      yaxis:axis(),
-      xaxis2:axis(),
-      xaxis3:axis(),
-      xaxis4:axis(),
-      xaxis5:axis(),
-      xaxis6:axis(),
-      xaxis7:axis(), 
-      yaxis2:axis(),
-      yaxis3:axis(),
-      yaxis4:axis(),
-      yaxis5:axis(),
-      yaxis6:axis(),
-      yaxis7:axis(),
+      xaxis: axis(),
+      yaxis: axis(),
+      xaxis2: axis(),
+      xaxis3: axis(),
+      xaxis4: axis(),
+      xaxis5: axis(),
+      xaxis6: axis(),
+      xaxis7: axis(),
+      yaxis2: axis(),
+      yaxis3: axis(),
+      yaxis4: axis(),
+      yaxis5: axis(),
+      yaxis6: axis(),
+      yaxis7: axis(),
     };
 
     Plotly.newPlot("myDiv", data, layout);
