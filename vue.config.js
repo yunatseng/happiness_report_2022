@@ -7,11 +7,25 @@ module.exports = {
     ? '/happiness_report_2022/'
     : '/',
   configureWebpack: {
+    module: {
+      rules: [
+        {
+          test: /\.csv$/,
+          loader: 'csv-loader',
+          options: {
+            dynamicTyping: true,
+            header: true,
+            skipEmptyLines: true
+          }
+        }
+      ]
+    },
     resolve: {
       alias: {
         "@": path.resolve(__dirname, 'src/'),
         '@assets': path.resolve(__dirname,'src/assets')
-      }
+      },
+      
     }
   }
 }

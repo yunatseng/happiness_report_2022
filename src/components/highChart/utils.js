@@ -9,7 +9,7 @@ export function initMap() {
         text: "世界地圖幸福得分總覽",
         },
         subtitle: {
-        text: "Source: https://www.kaggle.com/datasets/ajaypalsinghlo/world-happiness-report-2022",
+        text: "Data source: <a href='https://www.kaggle.com/datasets/ajaypalsinghlo/world-happiness-report-2022'>https://www.kaggle.com/datasets/ajaypalsinghlo/world-happiness-report-2022</a>",
         },
         mapNavigation: {
         enabled: true,
