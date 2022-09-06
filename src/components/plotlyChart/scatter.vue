@@ -24,7 +24,7 @@ export default {
       
     };
   },
-  async mounted() {
+  mounted() {
     const rows = happy_df_without_rank;
 
     function unpack(rows, key) {
