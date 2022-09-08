@@ -2,78 +2,80 @@
   <v-container fluid>
     <v-row>
       <v-img
-        class="grey lighten-5 white--text"
+        class="white--text"
         src="../assets/bg.jpg"
-        :lazy-src="`https://picsum.photos/10/6?image=1`"
-        :height="$vuetify.breakpoint.smAndDown?'100%':'400'"
+        :lazy-src="`https://picsum.photos/id/11/10/6`"
+        :height="$vuetify.breakpoint.smAndDown ? '100%' : '300'"
       >
         <template v-slot:placeholder>
-          <v-row
-            class="fill-height ma-0"
-            align="center"
-            justify="center"
-          >
-            <v-progress-circular
-              indeterminate
-              color="grey lighten-5"
-            />
+          <v-row class="fill-height ma-0" align="center" justify="center">
+            <v-progress-circular indeterminate color="grey lighten-5" />
           </v-row>
         </template>
         <v-container class="fill-height">
-          <v-row
-            align="center"
-            :class="$vuetify.breakpoint.smAndDown?'pl-4 pr-6':''"
-          >
-            <strong class="display-4 font-weight-regular">World Happiness</strong>
-            <v-row justify="end">
-              <div class="headline font-weight-light">
-                2022
-              </div>
-    
-            </v-row>
+          <v-row style="justify-content: space-around; align-items: center">
+            <div class="text" style="margin-left: -100px; margin-bottom: 150px">
+              <h1>World Happiness Report</h1>
+            </div>
+            <div class="text" >
+              <h2>2022</h2>
+            </div>
           </v-row>
         </v-container>
       </v-img>
     </v-row>
     <v-row>
-      <v-col class="py-0 px-0" cols="12" >
-        <div style="line-height:1.7em;font-weight: 400;font-size:19px;" class="ma-5 ma-md-14 text-center text-xs-subtitle-1 ">
-          《世界幸福報告》（World Happiness Report）為聯合國為衡量可持續的幸福發展方案，所出版的國際調查報告。<br>今年是《世界幸福報告》發布的第<strong> 10 </strong>週年，使用來自<strong>蓋洛普世界民意調查</strong>的數據，可在《世界幸福報告》官網上下載查看。<br>每年由永續發展解法組織（Sustainable Development Solutions Network, SDSN）<sup>[1]</sup> 出版，並利用<strong> Cantril 階梯 </strong><sup>[2]</sup> 方法來進行調查。
+      <v-col class="py-0 px-0" cols="12">
+        <div
+          style="line-height: 1.7em; font-weight: 400; font-size: 19px"
+          class="ma-5 ma-md-14 text-center text-xs-subtitle-1"
+        >
+          《世界幸福報告》（World Happiness
+          Report）為聯合國為衡量可持續的幸福發展方案，所出版的國際調查報告。<br />今年是《世界幸福報告》發布的第<strong>
+            10 </strong
+          >週年，使用來自<strong>蓋洛普世界民意調查</strong>的數據，可在《世界幸福報告》官網上下載查看。<br />每年由永續發展解法組織（Sustainable
+          Development Solutions Network, SDSN）<sup>[1]</sup>
+          出版，並利用<strong> Cantril 階梯 </strong
+          ><sup>[2]</sup> 方法來進行調查。
           <v-alert
             outlined
             color="cyan "
             class="mt-4 text-subtitle-1 text-md-h6"
           >
             <strong>🪜 Cantril 階梯 🪜</strong><br />
-            受訪者被要求想像一個階梯，從下到上階梯的編號分別是<strong>零</strong>到<strong>十</strong>。<br>十分代表最好的生活，零分則是最糟的生活。請受訪者對自己目前的生活進行階梯位置評分。</v-alert>
+            受訪者被要求想像一個階梯，從下到上階梯的編號分別是<strong>零</strong>到<strong>十</strong>。<br />十分代表最好的生活，零分則是最糟的生活。請受訪者對自己目前的生活進行階梯位置評分。</v-alert
+          >
         </div>
       </v-col>
     </v-row>
 
-<!--  -->
+    <!--  -->
     <v-row>
       <v-col class="py-0 px-0">
-<Map/>
+        <Map />
       </v-col>
     </v-row>
 
-<!--  -->
+    <!--  -->
     <v-row>
-      <v-col
-        class="py-0 px-0" cols="12"
-      >
-<Scatter/>
+      <v-col class="py-0 px-0" cols="12">
+        <Scatter />
       </v-col>
     </v-row>
 
-<!--  -->
+    <!--  -->
+    <!--  -->
+    <v-row>
+      <v-col class="py-0 px-0" cols="12">
+        <PackedBubble />
+      </v-col>
+    </v-row>
+
+    <!--  -->
     <v-row>
       <v-col cols="12" style="">
         <div class="ma-5 ma-md-16 text-center">
-          <v-alert
-            outlined
-            color="cyan "
-            class="text-subtitle-1 text-md-h6"
+          <v-alert outlined color="cyan " class="text-subtitle-1 text-md-h6"
             >延伸閱讀</v-alert
           >
         </div>
@@ -97,27 +99,27 @@
             <li>
               <a
                 class="related-links"
-                href="https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=L0020030"
-                >現行精神衛生法條文</a
+                href="https://happiness-report.s3.amazonaws.com/2022/Appendix_1_StatiscalAppendix_Ch2.pdf"
+                >Data Sources and Variable Definitions</a
               >
             </li>
           </ul>
           <v-divider style="margin: 18px" />
 
-          <p><strong>相關新聞</strong></p>
+          <p><strong>其他有趣的分析</strong></p>
           <ul>
             <li>
               <a
                 class="related-links"
-                href="https://www.cna.com.tw/news/firstnews/202111210025.aspx"
-                >超商店員疑勸戴口罩遭刺死 犯嫌遭羈押</a
+                href="https://worldhappiness.report/ed/2022/using-social-media-data-to-capture-emotions-before-and-during-covid-19/"
+                >Using Social Media Data to Capture Emotions Before and During COVID-19</a
               >
             </li>
             <li>
               <a
                 class="related-links"
-                href="https://www.cna.com.tw/news/asoc/202110200372.aspx"
-                >未戴口罩被提醒惱羞毆打超商店員顧客 桃園男送辦</a
+                href="https://worldhappiness.report/ed/2020/the-nordic-exceptionalism-what-explains-why-the-nordic-countries-are-constantly-among-the-happiest-in-the-world/"
+                >What Explains Why the Nordic Countries Are Constantly Among the Happiest in the World</a
               >
             </li>
             <li>
@@ -140,8 +142,9 @@
 </template>
 
 <script>
-import Map from "../components/highChart/map.vue"
-import Scatter from './plotlyChart/scatter.vue';
+import Map from "../components/highChart/map.vue";
+import PackedBubble from "../components/highChart/packedBubble.vue";
+import Scatter from "./plotlyChart/scatter.vue";
 /**
  *  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
  *  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables    */
@@ -164,36 +167,35 @@ export default {
   name: "Main",
   components: {
     Map,
-    Scatter
+    Scatter,
+    PackedBubble,
   },
   data: () => ({}),
-  computed: {
-  
-  },
-  methods: {
-    
-  },
+  computed: {},
+  methods: {},
 };
 </script>
 <style>
 a {
   text-decoration: none;
 }
-.carousel-text1 {
-  font-size: 18px !important;
-  width: 100% !important;
-  font-weight: bold;
-  height: 60px;
+h1 {
+  color: #fffffc;
+  text-align: center;
+  font-size: 3em;
+  font-family: "Comic Sans MS", cursive, LiSu, sans-serif;
+  letter-spacing: 3px;
 }
-.carousel-text2 {
-  margin-top: 15px;
-  width: 100% !important;
-  font-size: 16px !important;
+h2 {
+  color: #fffffc;
+  text-align: center;
+  font-size: 1.8em;
+  font-family: "Comic Sans MS", cursive, LiSu, sans-serif;
+  letter-spacing: 1px;
 }
-.carousel-img {
-  width: 60% !important;
-  margin-top: 30px !important;
-  margin-left: 0 !important;
+
+.text {
+
 }
 .related-links {
   font-style: 14px;
