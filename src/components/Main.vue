@@ -5,7 +5,7 @@
         class="white--text"
         src="../assets/bg.jpg"
         :lazy-src="`https://picsum.photos/id/11/10/6`"
-        :height="$vuetify.breakpoint.smAndDown ? '100%' : '300'"
+        :height="$vuetify.breakpoint.smAndDown ? '100%' : '250'"
       >
         <template v-slot:placeholder>
           <v-row class="fill-height ma-0" align="center" justify="center">
@@ -75,20 +75,13 @@
     <v-row>
       <v-col cols="12" style="">
         <div class="ma-5 ma-md-16 text-center">
-          <v-alert outlined color="cyan " class="text-subtitle-1 text-md-h6"
+          <!-- <v-alert outlined color="cyan " class="text-subtitle-1 text-md-h6"
             >延伸閱讀</v-alert
-          >
+          > -->
         </div>
         <v-alert text color="cyan " border="left">
-          <p><strong>相關法條討論</strong></p>
+          <p><strong>數據方法</strong></p>
           <ul>
-            <li>
-              <a
-                class="related-links"
-                href="https://drive.google.com/file/d/103ddeuTXk4tA3R38unoXdotlxYCEWbCd/view"
-                >民間版《精神衛生法》說明及全文</a
-              >
-            </li>
             <li>
               <a
                 class="related-links"
@@ -106,7 +99,7 @@
           </ul>
           <v-divider style="margin: 18px" />
 
-          <p><strong>你可能想知道...</strong></p>
+          <p><strong>你可能有興趣...</strong></p>
           <ul>
             <li>
               <a
@@ -122,22 +115,10 @@
                 >What Explains Why the Nordic Countries Are Constantly Among the Happiest in the World</a
               >
             </li>
-            <li>
-              <a
-                class="related-links"
-                href="https://www.cna.com.tw/news/asoc/202110270059.aspx"
-                >不滿被要求戴口罩 台中醉男毆打店員遭法辦</a
-              >
-            </li>
           </ul>
         </v-alert>
       </v-col>
     </v-row>
-    <!-- <v-row>
-      <v-col cols="12" style="">
-        <div id="disqus_thread"></div>
-      </v-col>
-    </v-row> -->
   </v-container>
 </template>
 
@@ -145,23 +126,6 @@
 import Map from "../components/highChart/map.vue";
 import PackedBubble from "../components/highChart/packedBubble.vue";
 import Scatter from "./plotlyChart/scatter.vue";
-/**
- *  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
- *  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables    */
-/*
-    var disqus_config = function () {
-    this.page.url = PAGE_URL;  // Replace PAGE_URL with your page's canonical URL variable
-    this.page.identifier = PAGE_IDENTIFIER; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
-    };
-    */
-// (function () {
-//   // DON'T EDIT BELOW THIS LINE
-//   var d = document,
-//     s = d.createElement("script");
-//   s.src = "https://ptt-1.disqus.com/embed.js";
-//   s.setAttribute("data-timestamp", +new Date());
-//   (d.head || d.body).appendChild(s);
-// })();
 
 export default {
   name: "Main",
