@@ -92,8 +92,8 @@
             <li>
               <a
                 class="related-links"
-                href="https://isbn.ncl.edu.tw/NEW_ISBNNet/main_DisplayRecord.php?&Pact=Display&Pstart=1"
-                >正常與瘋狂的天秤: 談精神疾病與司法鑑定</a
+                href="https://news.gallup.com/poll/105226/world-poll-methodology.aspx"
+                >Gallup World Poll Methodology 蓋洛普世界民意調查方法</a
               >
             </li>
             <li>
@@ -106,7 +106,7 @@
           </ul>
           <v-divider style="margin: 18px" />
 
-          <p><strong>其他有趣的分析</strong></p>
+          <p><strong>你可能想知道...</strong></p>
           <ul>
             <li>
               <a
@@ -199,6 +199,8 @@ h2 {
 }
 .related-links {
   font-style: 14px;
-  color: #231306 !important;
+}
+.related-links:hover{
+  color: #00E5FF
 }
 </style>
