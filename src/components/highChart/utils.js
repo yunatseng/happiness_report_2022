@@ -80,7 +80,7 @@ export function initMap() {
 
 export function initPackedBubble() {
     Highcharts.setOptions({
-        colors: ['#0052d4','#455A64', '#4DD0E1']
+        colors: ['#1444d5','#455A64', '#4DD0E1']
     });
     Highcharts.chart('containerKmeans', {
         chart: {
@@ -113,6 +113,10 @@ export function initPackedBubble() {
               },
             dataLabels: {
               enabled: true,
+              style: {
+                fontWeight: 'normal',
+                fontFamily: 'Arial, Helvetica, Clean, sans-serif'
+            },
               formatter: function () {
                 if (this.point.value > 7) {
                     return this.point.name;
