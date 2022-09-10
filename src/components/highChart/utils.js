@@ -109,7 +109,7 @@ export function initPackedBubble() {
             layoutAlgorithm: {
                 splitSeries: false,
                 gravitationalConstant: 0.02,
-                enableSimulation: false
+                // enableSimulation: false
               },
             dataLabels: {
               enabled: true,
