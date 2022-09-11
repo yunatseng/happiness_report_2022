@@ -1,5 +1,5 @@
 <template>
-  <div id="containerKmeans" style="width: 70%;margin: auto"></div>
+  <div id="containerKmeans" style="width: 65%;margin: auto"></div>
 </template>
 
 <script>

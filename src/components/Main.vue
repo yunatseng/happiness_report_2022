@@ -89,66 +89,57 @@
     <v-row>
       <v-col class="py-0 px-0" cols="12">
         <PackedBubble />
-          <div
-      style="line-height: 1.7em; font-weight: 400; font-size: 19px"
-      class="ma-5 ma-md-14  text-center text-xs-subtitle-1"
-    >
-      這裡我們所用的分群方法稱為<strong> k-means clustering</strong>（k-平均演算法) <sup>[1]</sup>，<br>只要告訴機器我們想分成幾（k）群，機器就會將整體 input 資料利用數學運算來幫我們分群。<br>首先我們看一下各群的資料中心，來大致判斷機器分的群有哪些特性：<p></p>
-<v-simple-table dense>
-    <template v-slot:default>
-      <thead>
-        <tr>
-          <th class="text-center">
-             
-          </th>
-          <th class="text-center subtitle-2">
-            Happiness score
-          </th>
-          <th class="text-center subtitle-2">
-            GDP per capita
-          </th>
-           <th class="text-center subtitle-2">
-            Social support	
-          </th>
-           <th class="text-center subtitle-2">
-            Healthy life expectancy
-          </th>
-           <th class="text-center subtitle-2">
-            Freedom to make life choices
-          </th>
-           <th class="text-center subtitle-2">
-            Generosity
-          </th>
-           <th class="text-center subtitle-2">
-            Perceptions of corruption
-          </th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr
-          v-for="(item,i) in cluster_centers"
-          :key="i"
-        ><td>群組 {{ i+1 }}</td>
-          <td>{{ item[0].toFixed(3) }}</td>
-          <td>{{ item[1].toFixed(3) }}</td>
-          <td>{{ item[2].toFixed(3) }}</td>
-          <td>{{ item[3].toFixed(3) }}</td>
-          <td>{{ item[4].toFixed(3) }}</td>
-          <td>{{ item[5].toFixed(3) }}</td>
-          <td>{{ item[6].toFixed(3) }}</td>
-        </tr>
-      </tbody>
-    </template>
-  </v-simple-table>
-    </div>
+        <div
+          style="line-height: 1.7em; font-weight: 400; font-size: 19px"
+          class="ma-5 mx-md-16 my-md-12 text-center text-xs-subtitle-1"
+        >
+          這裡我們所用的分群方法稱為<strong> k-means clustering</strong
+          >（k-平均演算法)
+          <sup>[1]</sup>，<br />只要告訴機器我們想分成幾（k）群，機器就會將整體
+          input 資料利用數學運算來幫我們分群。<br />首先我們看一下各群的資料中心，來大致判斷機器分的群有哪些特性：
+          <v-simple-table dense class="ma-5 ma-md-14 mb-md-8 mt-md-8">
+            <template v-slot:default>
+              <thead>
+                <tr>
+                  <th class="text-center"></th>
+                  <th class="text-center subtitle-2">Happiness score</th>
+                  <th class="text-center subtitle-2">GDP per capita</th>
+                  <th class="text-center subtitle-2">Social support</th>
+                  <th class="text-center subtitle-2">
+                    Healthy life expectancy
+                  </th>
+                  <th class="text-center subtitle-2">
+                    Freedom to make life choices
+                  </th>
+                  <th class="text-center subtitle-2">Generosity</th>
+                  <th class="text-center subtitle-2">
+                    Perceptions of corruption
+                  </th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr v-for="(item, i) in cluster_centers" :key="i">
+                  <td>群組 {{ i + 1 }}</td>
+                  <td>{{ item[0].toFixed(3) }}</td>
+                  <td>{{ item[1].toFixed(3) }}</td>
+                  <td>{{ item[2].toFixed(3) }}</td>
+                  <td>{{ item[3].toFixed(3) }}</td>
+                  <td>{{ item[4].toFixed(3) }}</td>
+                  <td>{{ item[5].toFixed(3) }}</td>
+                  <td>{{ item[6].toFixed(3) }}</td>
+                </tr>
+              </tbody>
+            </template>
+          </v-simple-table>
+        </div>
       </v-col>
     </v-row>
     <!-- packedBubble end -->
     <!--  -->
     <v-row>
-      <v-col cols="12" >
+      <v-col cols="12">
         <!-- <div class="ma-5 ma-md-16 text-center"> -->
-          <!-- <v-alert outlined color="cyan " class="text-subtitle-1 text-md-h6"
+        <!-- <v-alert outlined color="cyan " class="text-subtitle-1 text-md-h6"
             >延伸閱讀</v-alert
           > -->
         <!-- </div> -->
@@ -224,10 +215,10 @@ export default {
   },
   data: () => ({
     cluster_centers: [
-        [7.058550,1.956350,1.177550,0.784550,0.656500,0.190100,0.397300],
-        [4.431808,0.977750,0.615481,0.406462,0.409538,0.156712,0.122154],
-        [5.935095,1.566959,1.036486,0.658838,0.555257,0.129270,0.112162],
-      ],
+      [7.05855, 1.95635, 1.17755, 0.78455, 0.6565, 0.1901, 0.3973],
+      [4.431808, 0.97775, 0.615481, 0.406462, 0.409538, 0.156712, 0.122154],
+      [5.935095, 1.566959, 1.036486, 0.658838, 0.555257, 0.12927, 0.112162],
+    ],
   }),
   computed: {},
   methods: {},

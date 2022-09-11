@@ -14,7 +14,7 @@ export function initPackedBubble() {
     Highcharts.chart('containerKmeans', {
         chart: {
           type: 'packedbubble',
-          height: '80%'
+          height: '75%'
         },
         title: {
           text: 'Clustering With K-Means'
@@ -32,7 +32,7 @@ export function initPackedBubble() {
         plotOptions: {
           packedbubble: {
             minSize: '1%',
-            maxSize: '90%',
+            maxSize: '85%',
             zMin: 2,
             zMax: 6,
             layoutAlgorithm: {
@@ -44,6 +44,8 @@ export function initPackedBubble() {
               enabled: true,
               style: {
                 fontWeight: 'normal',
+                color: 'black',
+                // textOutline: 'none',
                 fontFamily: 'Arial, Helvetica, Clean, sans-serif'
             },
               formatter: function () {
