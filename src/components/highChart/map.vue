@@ -3,7 +3,7 @@
 </template>
 
 <script>
-import { initMap } from './utils';
+import { initMap } from './map';
 
 export default {
   mounted() {

@@ -53,7 +53,15 @@
     <v-row>
       <v-col class="py-0 px-0">
         <Map />
+        <div style="line-height: 1.7em; font-weight: 400; font-size: 19px"
+          class="ma-5 ma-md-14 text-center text-xs-subtitle-1">
+          從上圖可以看出，芬蘭是世界上最快樂的國家，而其鄰國挪威、丹麥、丹麥、冰島和瑞典等，也屬於幸福指數得分相對高的前段班。<br>
+          台灣排名第 26，相對於鄰國日本(54)、韓國(59)、中國(72)、菲律賓(60)，算是獲得相當好的成績，是東亞地區的快樂冠軍。<br>
+          以色列的排名相對特殊，在隔壁同學均一片灰色的得分中，獲得了幸福指數 7.36、幸福總排名世界第九的好成績。<br>阿富汗和阿富汗和黎巴嫩則敬陪末座，分別拿到幸福指數倒數第一及倒數第二的成績。
+          </div>
+        
       </v-col>
+
     </v-row>
 
     <!--  -->
@@ -84,6 +92,7 @@
           <ul>
             <li>
               <a
+              target="_blank"
                 class="related-links"
                 href="https://news.gallup.com/poll/105226/world-poll-methodology.aspx"
                 >Gallup World Poll Methodology 蓋洛普世界民意調查方法</a
@@ -91,6 +100,7 @@
             </li>
             <li>
               <a
+              target="_blank"
                 class="related-links"
                 href="https://happiness-report.s3.amazonaws.com/2022/Appendix_1_StatiscalAppendix_Ch2.pdf"
                 >Data Sources and Variable Definitions</a
@@ -103,6 +113,7 @@
           <ul>
             <li>
               <a
+              target="_blank"
                 class="related-links"
                 href="https://worldhappiness.report/ed/2022/using-social-media-data-to-capture-emotions-before-and-during-covid-19/"
                 >Using Social Media Data to Capture Emotions Before and During COVID-19</a
@@ -110,9 +121,18 @@
             </li>
             <li>
               <a
+              target="_blank"
                 class="related-links"
                 href="https://worldhappiness.report/ed/2020/the-nordic-exceptionalism-what-explains-why-the-nordic-countries-are-constantly-among-the-happiest-in-the-world/"
                 >What Explains Why the Nordic Countries Are Constantly Among the Happiest in the World</a
+              >
+            </li>
+             <li>
+              <a
+              target="_blank"
+                class="related-links"
+                href="https://worldpopulationreview.com/country-rankings/suicide-rate-by-country"
+                >Suicide Rate by Country 2022</a
               >
             </li>
           </ul>

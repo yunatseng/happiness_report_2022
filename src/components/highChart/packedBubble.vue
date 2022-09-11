@@ -3,7 +3,7 @@
 </template>
 
 <script>
-import { initPackedBubble } from './utils';
+import { initPackedBubble } from './bubble';
 
 export default {
  mounted() {
