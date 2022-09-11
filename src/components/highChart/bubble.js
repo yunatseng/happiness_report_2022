@@ -20,7 +20,7 @@ export function initPackedBubble() {
           text: 'Clustering With K-Means'
         },
         subtitle: {
-            text: "Note: 因版面配置，僅標註 Happiness score ±2σ (σ=1.0868) 以外的 Country",
+            text: "Note: 因版面配置，僅標註 Happiness score ±σ (σ=1.0868) 以外的 Country",
         },
         credits: {
             enabled: false,
@@ -47,7 +47,7 @@ export function initPackedBubble() {
                 fontFamily: 'Arial, Helvetica, Clean, sans-serif'
             },
               formatter: function () {
-                if (this.point.value > 7) {
+                if (this.point.value > 6.65 || this.point.value < 4.4) {
                     return this.point.name;
                 }
             } 
