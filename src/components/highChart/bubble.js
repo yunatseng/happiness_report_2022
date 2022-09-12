@@ -27,7 +27,7 @@ export function initPackedBubble() {
         },
         tooltip: {
           useHTML: true,
-          pointFormat: '<b>{point.name}:</b><br>{point.value}m CO</br>'
+          pointFormat: '<b>{point.name} / Rank:{point.RANK}</b><br>Happiness score:{point.value}</br>GDP:{point.GDP per capita}</br>Social support:{point.Social support}</br>Healthy:{point.Healthy life expectancy}</br>Freedom:{point.Freedom to make life choices}</br>Generosity:{point.Generosity}</br>Corruption:{point.Perceptions of corruption}</br>'
         },
         plotOptions: {
           packedbubble: {
