@@ -159,10 +159,10 @@
     <v-row>
       <v-col cols="12">
         <div class="ma-5 mx-md-16 my-md-12 text-center text-xs-subtitle-1">
-        <v-alert outlined color="cyan" class="text-subtitle-1 text-md-h6"
+        <v-alert outlined color="cyan" class="text-subtitle-1 text-md-h6 pa-5"
             ><strong>✍️ 心得總結 ✍️</strong><br />
             和幸福指數最具有正相關的並不是人均 GDP，而是你我身邊的社會支持網是否足夠。<br />和人均 GDP 唯一呈現負相關的指標為 Generosity（慷慨度）、和幸福指數最具有正相關性的 GDP 資料為中收入國家。<br />
-            香港在 K-means 集群分析中，呈現出一個很獨特的分析結果。<br />此報告完成時（March 9, 2022）尚未開始烏俄戰爭，此因素或許會明顯的改變烏俄兩國及周遭鄰國在明年的排名。
+            香港在 K-means 集群分析中，呈現出一個很獨特的存在。<br />此報告完成時（March 9, 2022）尚未開始烏俄戰爭，此因素或許會明顯的改變烏俄兩國及周遭鄰國在明年的排名。
             </v-alert>
         </div>
         <v-alert text color="cyan " border="left">
