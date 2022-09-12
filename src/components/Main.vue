@@ -96,7 +96,8 @@
           這裡我們所用的分群方法稱為<strong> k-means clustering</strong
           >（k-平均演算法)
           <sup>[1]</sup>，<br />只要告訴機器我們想分成幾（k）群，機器就會將整體
-          input 資料利用數學運算來幫我們分群。<br />首先我們看一下各群的資料中心，來大致判斷機器分的群有哪些特性：
+          input 資料利用數學運算來幫我們分群。<br />首先我們看一下各群的資料中心（Cluster
+          Center），來大致判斷機器分的群有哪些特性：
           <v-simple-table dense class="ma-5 ma-md-14 mb-md-8 mt-md-8">
             <template v-slot:default>
               <thead>
@@ -131,6 +132,25 @@
               </tbody>
             </template>
           </v-simple-table>
+          <div
+            style="line-height: 1.7em; font-weight: 400; font-size: 19px"
+            class="ma-5 mx-md-16 my-md-12 text-left text-xs-subtitle-1"
+          >
+            <ul>
+              <li>
+                <strong>群組 1</strong>：Cluster center
+                每項都拿到最高的分數，可以推測此群應為幸福指數前段班的國家，Happiness
+                分數整體介於 6.5~7.8 之間，唯獨香港（5.425）亦被歸類在群組 1。
+              </li>
+              <br>
+              <li>
+                <strong>群組 2</strong>：除了 Generosity（慷慨度）和 Perceptions of corruption（對政府/企業的腐敗信心程度）以外，其餘每項都拿到了最低的 Cluster center。Happiness 分數整體介於 2.2~5.4 之間，推測此群應為幸福指數排名較末的國家。另外此群的 Freedom to make life choices（對生活的選擇自由）Cluster center 約落在 0.41 分，還略高於香港在此項目所拿到的分數（0.40）。
+              </li> <br>
+              <li>
+                <strong>群組 3</strong>：整體 Cluster center 數值位於中間，除了 Generosity（慷慨度）和 Perceptions of corruption（對政府/企業的腐敗信心程度）這兩項拿到最低分。Happiness 分數整體介於 4.3~7.4 之間，推測此群應為幸福指數排名中間的國家。另外，雖然此群的 Generosity（慷慨度）Cluster center 數值為最低，但該指標第一名的國家 Indonesia（印尼）(0.46) 亦被分配到了此群組中。
+              </li>
+            </ul>
+          </div>
         </div>
       </v-col>
     </v-row>
@@ -138,11 +158,13 @@
     <!--  -->
     <v-row>
       <v-col cols="12">
-        <!-- <div class="ma-5 ma-md-16 text-center"> -->
-        <!-- <v-alert outlined color="cyan " class="text-subtitle-1 text-md-h6"
-            >延伸閱讀</v-alert
-          > -->
-        <!-- </div> -->
+        <div class="ma-5 mx-md-16 my-md-12 text-center text-xs-subtitle-1">
+        <v-alert outlined color="cyan" class="text-subtitle-1 text-md-h6"
+            ><strong>✍️ 心得總結 ✍️</strong><br />
+            和幸福指數最具有正相關的並不是人均 GDP，而是你我身邊的社會支持網是否足夠。<br />和人均 GDP 唯一呈現負相關的指標為 Generosity（慷慨度）、和幸福指數最具有正相關性的 GDP 資料為中收入國家。<br />
+            香港在 K-means 集群分析中，呈現出一個很獨特的分析結果。<br />此報告完成時（March 9, 2022）尚未開始烏俄戰爭，此因素或許會明顯的改變烏俄兩國及周遭鄰國在明年的排名。
+            </v-alert>
+        </div>
         <v-alert text color="cyan " border="left">
           <p><strong>數據方法</strong></p>
           <ul>
