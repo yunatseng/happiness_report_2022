@@ -66,10 +66,10 @@
           在這次的調查報告中，還有其他六個指數影響了幸福分數的排名，分別是：<br />(1)
           GDP per capita、(2) Social support、(3) Healthy life expectancy、(4)
           Freedom to make life choices、(5) Generosity、(6) Perceptions of
-          corruption。<br />詳細的指標定義和數據來源可參考<a
+          corruption。<br />詳細的指標定義和數據來源可參考
+            網頁下方的<a
             href="#Variable_Definitions"
-          >
-            下方連結 (Data Sources and Variable Definitions)</a
+          >「數據方法」 (Data Sources and Variable Definitions)</a
           >
           <p></p>
           下面開始探討哪一個指標最大程度體現了幸福指數的排名，我們用相關係數矩陣來看看各指數對幸福指數的相關度。
@@ -162,7 +162,7 @@
         <v-alert outlined color="cyan" class="text-subtitle-1 text-md-h6 pa-5"
             ><strong>✍️ 心得總結 ✍️</strong><br />
             和幸福指數最具有正相關的並不是人均 GDP，而是你我身邊的社會支持網是否足夠。<br />和人均 GDP 唯一呈現負相關的指標為 Generosity（慷慨度）、和幸福指數最具有正相關性的 GDP 資料為中收入國家。<br />
-            香港在 K-means 集群分析中，呈現出一個很獨特的存在。<br />此報告完成時（March 9, 2022）尚未開始烏俄戰爭，此因素或許會明顯的改變烏俄兩國及周遭鄰國在明年的排名。
+            香港在 K-means 集群分析中，呈現出一個很獨特的存在。<br />此報告完成時（March 9, 2022）正開始烏俄戰爭，此因素或許會明顯的改變烏俄兩國及周遭鄰國在明年的排名。
             </v-alert>
         </div>
         <v-alert text color="cyan " border="left">
