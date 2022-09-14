@@ -185,6 +185,14 @@
                 >Data Sources and Variable Definitions</a
               >
             </li>
+            <li>
+              <a
+                target="_blank"
+                class="related-links"
+                href="https://worldhappiness.report/faq/"
+                >FAQ (e.g. What is Dystopia?)</a
+              >
+            </li>
           </ul>
           <v-divider style="margin: 18px" />
 
