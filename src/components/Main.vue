@@ -34,9 +34,11 @@
           Report）為聯合國為衡量可持續的幸福發展方案，所出版的國際調查報告。<br />今年是《世界幸福報告》發布的第<strong>
             10 </strong
           >週年，使用來自<strong>蓋洛普世界民意調查</strong>的數據，可在《世界幸福報告》官網上下載查看。<br />每年由永續發展解法組織（Sustainable
-          Development Solutions Network, SDSN）<sup>[1]</sup>
-          出版，並利用<strong> Cantril 階梯 </strong
-          ><sup>[2]</sup> 方法來進行調查。
+          Development Solutions Network, SDSN）
+          <!-- <sup>[1]</sup> -->
+          出版，並利用<strong> Cantril 階梯 </strong>
+          <!-- <sup>[2]</sup> -->
+          方法來進行調查。
           <v-alert
             outlined
             color="cyan "
@@ -95,7 +97,8 @@
         >
           這裡我們所用的分群方法稱為<strong> k-means clustering</strong
           >（k-平均演算法)
-          <sup>[1]</sup>，<br />只要告訴機器我們想分成幾（k）群，機器就會將整體
+          <!-- <sup>[1]</sup> -->
+          ，<br />只要告訴機器我們想分成幾（k）群，機器就會將整體
           input 資料利用數學運算來幫我們分群。<br />首先我們看一下各群的資料中心（Cluster
           Center），來大致判斷機器分的群有哪些特性：
           <v-simple-table dense class="ma-5 ma-md-14 mb-md-8 mt-md-8">
