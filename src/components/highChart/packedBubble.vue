@@ -1,5 +1,5 @@
 <template>
-  <div id="containerKmeans" style="width: 65%;margin: auto"></div>
+  <div id="containerKmeans" class="container_kmeans"></div>
 </template>
 
 <script>
@@ -13,5 +13,9 @@ export default {
 </script>
 
 <style>
-
+.container_kmeans {
+  min-width: 320px;
+  max-width: 800px;
+  margin: 1em auto;
+}
 </style>

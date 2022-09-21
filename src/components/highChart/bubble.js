@@ -14,7 +14,7 @@ export function initPackedBubble() {
     Highcharts.chart('containerKmeans', {
         chart: {
           type: 'packedbubble',
-          height: '75%'
+          height: '100%'
         },
         title: {
           text: 'Clustering With K-Means'

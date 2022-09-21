@@ -5,7 +5,7 @@
         class="white--text"
         src="../assets/bg.jpg"
         :lazy-src="`https://picsum.photos/id/11/10/6`"
-        :height="$vuetify.breakpoint.smAndDown ? '100%' : '250'"
+        :height="$vuetify.breakpoint.smAndDown ? '230' : '250'"
       >
         <template v-slot:placeholder>
           <v-row class="fill-height ma-0" align="center" justify="center">
@@ -13,12 +13,12 @@
           </v-row>
         </template>
         <v-container class="fill-height">
-          <v-row style="justify-content: space-around; align-items: center">
-            <div class="text" style="margin-left: -100px; margin-bottom: 150px">
-              <h1>World Happiness Report</h1>
+          <v-row align="center" justify="center">
+            <div class="text">
+              <h1 :class="$vuetify.breakpoint.smAndDown ? 'banner_title-mobile' : 'banner_title-pc'">World Happiness Report</h1>
             </div>
             <div class="text">
-              <h2>2022</h2>
+              <h2 :class="$vuetify.breakpoint.smAndDown ? 'banner_subtitle-mobile' : 'banner_subtitle-pc'">2022</h2>
             </div>
           </v-row>
         </v-container>
@@ -27,8 +27,8 @@
     <v-row>
       <v-col class="py-0 px-0" cols="12">
         <div
-          style="line-height: 1.7em; font-weight: 400; font-size: 19px"
-          class="ma-5 ma-md-14 text-center text-xs-subtitle-1"
+          style="line-height: 1.7em; font-weight: 400; "
+          class="ma-5 ma-md-14 text-center text-md-h6 text-xs-body-2"
         >
           《世界幸福報告》（World Happiness
           Report）為聯合國為衡量可持續的幸福發展方案，所出版的國際調查報告。<br />今年是《世界幸福報告》發布的第<strong>
@@ -56,8 +56,8 @@
       <v-col class="py-0 px-0">
         <Map />
         <div
-          style="line-height: 1.7em; font-weight: 400; font-size: 19px"
-          class="ma-5 ma-md-14 mb-md-8 text-center text-xs-subtitle-1"
+          style="line-height: 1.7em; font-weight: 400; "
+          class="ma-5 ma-md-14 mb-md-8 text-center text-md-h6  text-xs-body-2"
         >
           從上圖可以看出，芬蘭是世界上最快樂的國家，而其鄰國挪威、丹麥、丹麥、冰島和瑞典等，也屬於幸福指數得分相對高的前段班。<br />
           台灣排名第 26，相對於鄰居日本 (54)、韓國 (59)、中國 (72)、菲律賓
@@ -92,8 +92,8 @@
       <v-col class="py-0 px-0" cols="12">
         <PackedBubble />
         <div
-          style="line-height: 1.7em; font-weight: 400; font-size: 19px"
-          class="ma-5 mx-md-16 my-md-12 text-center text-xs-subtitle-1"
+          style="line-height: 1.7em; font-weight: 400; "
+          class="ma-5 mx-md-16 my-md-12 text-center text-md-h6  text-xs-body-2"
         >
           這裡我們所用的分群方法稱為<strong> k-means clustering</strong
           >（k-平均演算法)
@@ -136,8 +136,8 @@
             </template>
           </v-simple-table>
           <div
-            style="line-height: 1.7em; font-weight: 400; font-size: 19px"
-            class="ma-5 mx-md-16 my-md-12 text-left text-xs-subtitle-1"
+            style="line-height: 1.7em; font-weight: 400;"
+            class="ma-5 mx-md-16 my-md-12 text-left text-md-h6  text-xs-body-2"
           >
             <ul>
               <li>
@@ -161,7 +161,7 @@
     <!--  -->
     <v-row>
       <v-col cols="12">
-        <div class="ma-5 mx-md-16 my-md-12 text-center text-xs-subtitle-1">
+        <div class="ma-5 mx-md-16 my-md-12 text-center text-xs-body-2">
         <v-alert outlined color="cyan" class="text-subtitle-1 text-md-h6 pa-5"
             ><strong>✍️ 心得總結 ✍️</strong><br />
             和幸福指數最具有正相關的並不是人均 GDP，而是你我身邊的社會支持網是否足夠。<br />和人均 GDP 唯一呈現負相關的指標為 Generosity（慷慨度）、和幸福指數最具有正相關性的 GDP 資料為中收入國家。<br />
@@ -258,6 +258,12 @@ export default {
 };
 </script>
 <style>
+.v-application .text-h6 {
+  font-size: 18px !important;
+}
+.v-application .text-md-h6{
+  font-size: 18px !important;
+}
 a {
   text-decoration: none;
 }
@@ -276,12 +282,22 @@ h2 {
   letter-spacing: 1px;
 }
 
-.text {
+.text .title{
+  margin-left: -100px; margin-bottom: 150px
 }
 .related-links {
   font-style: 14px;
 }
 .related-links:hover {
   color: #00e5ff;
+}
+.banner_title-mobile {
+  font-size: 2em !important;
+}
+.banner_subtitle-mobile {
+  margin-top: 10px;
+}
+.banner_subtitle-pc {
+  padding-left: 48px;
 }
 </style>
