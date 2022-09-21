@@ -4,9 +4,9 @@
     <div class="mx-5 mx-md-16 text-center">
       <v-expansion-panels>
         <v-expansion-panel>
-          <v-expansion-panel-header class="text-md-h6  text-xs-body-2">
+          <v-expansion-panel-header class="text-md-h6  text-body-2">
             Correlation Heatmap
-            <span class="cyan--text text-md-h6  text-xs-body-2"
+            <span class="cyan--text text-md-h6  text-body-2"
               >（可點我對照上圖）</span
             ></v-expansion-panel-header
           >
@@ -23,7 +23,7 @@
 
     <div
       style="line-height: 1.7em; font-weight: 400; "
-      class="ma-5 ma-md-14 mb-md-5 text-center text-md-h6  text-xs-body-2"
+      class="ma-5 ma-md-14 mb-md-5 text-center text-md-h6  text-body-2"
     >
       從上圖結果可以看出，和幸福指數正相關最高的是 Social support（社會支持）。
       這個指標的具體問題為：<br />「如果您遇到麻煩，是否有親戚或朋友可以在需要時提供幫助？」從結果來看，在遇到困難時身邊有救助資源的樣本，通常其幸福感的分數也比較高。
@@ -62,7 +62,7 @@
 
     <div
       style="line-height: 1.7em; font-weight: 400;"
-      class="ma-5 mx-md-16 my-md-12 text-center text-md-h6 text-xs-body-2"
+      class="ma-5 mx-md-16 my-md-12 text-center text-md-h6 text-body-2"
     >
       從上圖結果可以看出，高 GDP 國家群幸福指數約落在 6~8 分之間，但整體並沒有出現顯著的幸福正相關。中 GDP 國家群幸福指數約落在 4~6 分之間，也是和幸福指數相關性最高的一群。低 GDP 國家群幸福指數約落在 2~5 分之間，並且是和幸福指數最沒有相關性的一群。<br>
       整體而言雖然 GDP 指標仍是和幸福指數有高度正相關，但若在該指標裡再細分群組，仍然呈現出分別不太一樣的相關性。
