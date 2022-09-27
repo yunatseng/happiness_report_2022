@@ -161,5 +161,5 @@ export function GDPScatter(csv, name) {
         yaxis2: axis(),
     };
 
-    Plotly.newPlot(name, data, layout);
+    Plotly.newPlot(name, data, layout, {displayModeBar: false});
 }

@@ -24,9 +24,13 @@
 
 <script>
 export default {
-name: 'ExoansionPanel',
+name: 'ExpansionPanel',
   props: {
     fileName: String,
+    isMobile: {
+      type: Boolean,
+      required: true,
+    },
   },
 
 }

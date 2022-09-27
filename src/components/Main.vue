@@ -5,7 +5,7 @@
         class="white--text"
         src="../assets/bg.jpg"
         :lazy-src="`https://picsum.photos/id/11/10/6`"
-        :height="$vuetify.breakpoint.smAndDown ? '230' : '250'"
+        :height="isMobile ? '230' : '250'"
       >
         <template v-slot:placeholder>
           <v-row class="fill-height ma-0" align="center" justify="center">
@@ -15,10 +15,10 @@
         <v-container class="fill-height">
           <v-row align="center" justify="center">
             <div class="text">
-              <h1 :class="$vuetify.breakpoint.smAndDown ? 'banner_title-mobile' : 'banner_title-pc'">World Happiness Report</h1>
+              <h1 :class="isMobile ? 'banner_title-mobile' : 'banner_title-pc'">World Happiness Report</h1>
             </div>
             <div class="text">
-              <h2 :class="$vuetify.breakpoint.smAndDown ? 'banner_subtitle-mobile' : 'banner_subtitle-pc'">2022</h2>
+              <h2 :class="isMobile ? 'banner_subtitle-mobile' : 'banner_subtitle-pc'">2022</h2>
             </div>
           </v-row>
         </v-container>
@@ -82,7 +82,7 @@
     <!-- scatter plot start -->
     <v-row>
       <v-col class="py-0 px-0" cols="12">
-        <Scatter />
+        <Scatter :isMobile ="isMobile"/>
       </v-col>
     </v-row>
 
@@ -101,7 +101,7 @@
           ，<br />只要告訴機器我們想分成幾（k）群，機器就會將整體
           input 資料利用數學運算來幫我們分群。<br />首先我們看一下各群的資料中心（Cluster
           Center），來大致判斷機器分的群有哪些特性：
-          <v-simple-table dense class="ma-5 ma-md-14 mb-md-8 mt-md-8">
+          <v-simple-table dense class="ma-md-14 mb-md-8 mt-md-8" :class="isMobile ? 'ma-3' : 'ma-5'">
             <template v-slot:default>
               <thead>
                 <tr>
@@ -123,7 +123,8 @@
               </thead>
               <tbody>
                 <tr v-for="(item, i) in cluster_centers" :key="i">
-                  <td>群組 {{ i + 1 }}</td>
+                  <td v-if="!isMobile">群組 {{ i + 1 }}</td>
+                  <td v-else>Group {{ i + 1 }}</td>
                   <td>{{ item[0].toFixed(3) }}</td>
                   <td>{{ item[1].toFixed(3) }}</td>
                   <td>{{ item[2].toFixed(3) }}</td>
@@ -137,7 +138,8 @@
           </v-simple-table>
           <div
             style="line-height: 1.7em; font-weight: 400;"
-            class="ma-5 mx-md-16 my-md-12 text-left text-md-h6  text-body-2"
+            class="mx-md-16 my-md-12 text-left text-md-h6  text-body-2"
+            :class="isMobile ? '' : 'ma-5'"
           >
             <ul>
               <li>
@@ -238,13 +240,19 @@
 import Map from "../components/highChart/map.vue";
 import PackedBubble from "../components/highChart/packedBubble.vue";
 import Scatter from "./plotlyChart/scatter.vue";
-
 export default {
   name: "Main",
   components: {
     Map,
     Scatter,
     PackedBubble,
+  },
+  props: {
+  isMobile: {
+    type: Boolean,   
+    required: true,   
+  }},
+  mounted(){
   },
   data: () => ({
     cluster_centers: [
@@ -255,7 +263,7 @@ export default {
   }),
   computed: {},
   methods: {},
-};
+}
 </script>
 <style>
 .v-application .text-h6 {
