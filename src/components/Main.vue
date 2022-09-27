@@ -1,6 +1,6 @@
 <template>
   <v-container fluid>
-    <!-- <v-row>
+    <v-row>
       <v-img
         class="white--text"
         src="../assets/bg.jpg"
@@ -23,7 +23,7 @@
           </v-row>
         </v-container>
       </v-img>
-    </v-row> -->
+    </v-row>
     <v-row>
       <v-col class="py-0 px-0" cols="12">
         <div
