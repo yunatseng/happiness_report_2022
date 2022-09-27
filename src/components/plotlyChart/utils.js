@@ -1,6 +1,9 @@
 import Plotly from "plotly.js-dist-min";
 import happy_df_without_rank from "../../assets/data/happy_df_without_rank.csv";
-
+import isMobile from "is-mobile"
+const is_mobile = isMobile()
+const width = Math.max(window.screen.width, window.innerWidth);
+console.log(width,'width');
 
 export function scatterAll() {
     // Initialize the chart
@@ -149,8 +152,8 @@ export function GDPScatter(csv, name) {
     const layout = {
         title:
             `Happiness / ${name}-income<br><span style='font-size:11px;color:grey;'>Ref: <a href='https://data.worldbank.org/income-level/${name}-income'>https://data.worldbank.org/income-level/${name}-income</a></span>`,
-        height: 380,
-        width: 380,
+        height: is_mobile? width*0.9:'380',
+        width: is_mobile? width*0.9:'380',
         autosize: false,
         hovermode: "closest",
         dragmode: "select",

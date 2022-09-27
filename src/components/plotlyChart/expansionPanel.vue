@@ -27,10 +27,10 @@ export default {
 name: 'ExpansionPanel',
   props: {
     fileName: String,
-    isMobile: {
-      type: Boolean,
-      required: true,
-    },
+    // isMobile: {
+    //   type: Boolean,
+    //   required: true,
+    // },
   },
 
 }

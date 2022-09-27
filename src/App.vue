@@ -32,8 +32,8 @@
         width="100%"
       >
         <v-card-text class="white--text">
-          <ol>
-            <!-- <li v-for="(citation, i) in citeList" :key="i">
+          <!-- <ol>
+            <li v-for="(citation, i) in citeList" :key="i">
               <a
                 :id="`event_${i}`"
                 :tabindex="i"
@@ -43,8 +43,8 @@
               >
                 {{ citation.name }}
               </a>
-            </li> -->
-          </ol>
+            </li>
+          </ol> -->
         </v-card-text>
 
         <v-divider />
@@ -85,3 +85,10 @@ console.log(isMobile());
   }),
 };
 </script>
+<style>
+/* * {
+background: #000 !important;
+color: #0f0 !important;
+outline: solid #f00 1px !important;
+} */
+</style>
